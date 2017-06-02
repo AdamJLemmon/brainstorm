@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Game</title>
+        <meta charset="utf-8">
+        <!--Mobile Compatibility-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap & JQuery includes-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- IPFS -->
+        <!-- loading the minified version -->
+        <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
+        <script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+
+    </head>
+
+    <body>
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navText">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">LT Games</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="navText">HighLow</a></li>
+                        <li><a class="navText">Invest</a></li>
+                        <li><a class="navText">Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- GAME CONTAINER -->
+            <div  class="login-container">
+                <h2 class="lt-h2">Login to Your Account</h2><br>
+                <input type="text" id="user_name" class="lt-textbox" name="user"  placeholder="Username">
+                <input type="password" id="password" class="lt-textbox" name="pass" placeholder="Password">
+                <input type="submit" id="login" name="login" class="lt-full-btn" value="Login">
+                <div>
+                    <button type="button" id="register-modal-button" class="login-button" data-toggle="modal" data-target="#register-modal">Register</button>
+                    <button type="button" id="forgotpassword" class="login-button">Forgot Password</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="register-container">
+                <h2 class="lt-h2">Create Account</h2>
+                <input type="text" class="lt-textbox" id="reg_email" placeholder="Email">
+                <input type="text" class="lt-textbox" id="reg_user_name" placeholder="Username">
+                <input type="password" class="lt-textbox" id="reg_password" placeholder="Password">
+                <input type="submit" id="register" class="lt-full-btn" value="Register">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <!-- JS files-->
+    {% load static %}
+    <script  src="{% static 'web3.min.js' %}"></script>
+    <script src="{% static 'js/game.js' %}"></script>
+    <link  rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--<p>This is some text.</p>
+
+            window.location.href = window.location.href + "change_password/"
+
+            $.ajax({
+                url: '/change_password/',
+                type: "POST",
+                data: {
+                    'url': return_url,
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                },
+                dataType: 'json',
+                success: function (data) {
+                  console.log(data)
+                }
+              });
+
+-->
+            <!--<div class=row>-->
+                <!--Account: <input type="text" id="account"><br>-->
+                <!--To Account: <input type="text" id="toAccount"><br>-->
+                <!--Amount: <input type="text" id="amount"><br>-->
+            <!--</div>-->
+
+            <!--<div class=row>-->
+                <!--<button id="test_btn" type="button" class="btn btn-default">Storage Test Me</button>-->
+                <!--<button id="account_balance" type="button" class="btn btn-default">Get Account Balance</button>-->
+                <!--<button id="transfer_token" type="button" class="btn btn-default">Transfer</button>-->
+            <!--</div>-->
+            <!--<div class="container">-->
+                <!-- CANVAS GAME-->
+                <!--<canvas id="myCanvas" width="300" height="300" style="position: relative; top: 100px; order:1px; background-color: blue">-->
+                    <!--Your browser does not support the HTML5 canvas tag.-->
+                <!--</canvas>-->
+                <!--<button class="" onclick="myGame()">Try it</button>-->
+            <!--</div>-->
+
+
+

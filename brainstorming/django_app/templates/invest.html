@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Invest</title>
+        <meta charset="utf-8">
+        <!--Mobile Compatibility-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap & JQuery includes-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navText">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">LT Games</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="navText" href="/highlow">HighLow</a></li>
+                        <li><a class="navText" href="/invest">Invest</a></li>
+                        <li><a class="navText" href="/dashboard/{{ username }}">Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div style="display:block; margin: auto;">
+
+        </div>
+    </body>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <!-- JS files-->
+    {% load static %}
+    <script  src="{% static 'web3.min.js' %}"></script>
+    <script src="{% static 'js/game.js' %}"></script>
+    <script src="{% static 'js/contract_reader.js' %}"></script>
+    <link  rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <!-- Initial View Container -->
+    <div class="container" id="landing-container">
+        <h1 class="lt-h1">Some message, ie. Get paid for your wasted data!</h2>
+        <div>
+            <button type="button" id="find_wifi" class="login-button"><a href='/find_wifi'>Find WiFi</a></button>
+            <button type="button" id="register_wifi" class="login-button"><a href='/register_wifi'>Register My WiFi</a></button>
+        </div>
+    </div>
+    <!-- END Initial View Container -->
+
+    <!-- Background Video -->
+    <div style="overflow:hidden;">
+        <video id="home_video" preload='auto' loop autoplay muted>
+             <source src="{% static 'assets/video/city.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+    <!-- END Background Video -->
+{% endblock %}

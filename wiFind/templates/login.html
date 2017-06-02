@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+    <!-- Background Video -->
+    <div style="overflow:hidden;">
+        <video id="home_video" preload='auto' loop autoplay muted>
+             <source src="{% static 'assets/video/city.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+    <!-- END Background Video -->
+    
+    <!-- Login CONTAINER -->
+    <!-- User has not logged in, show the login window -->
+    <div  class="login-container" id='login_container'>
+            <h2 class="lt-h2">Login to Your Account</h2><br>
+            <input type="text" id="user_name" class="lt-textbox" name="user"  placeholder="Username">
+            <input type="password" id="password" class="lt-textbox" name="pass" placeholder="Password">
+            <button id="login_attempt" class="lt-full-btn">Login</button>
+            <div>
+                <button type="button" id="register-modal-button" class="login-button" data-toggle="modal" data-target="#register-modal">Create Account</button>
+                <button type="button" id="forgotpassword" class="login-button">Forgot Password</button>
+            </div>
+    </div>
+    <!-- END Login Container -->
+{% endblock %}
+
+{% block modals %}
+    <!-- Register Modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="vertical-alignment-helper">
+            <div class="modal-dialog vertical-align-center">
+                <div class="register-container">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    
+                    <!-- display:none; -->
+                    <h2 class="lt-h2">Create Account</h2>
+                    <input type="text" class="lt-textbox" id="reg_email" placeholder="Email">
+                    <input type="text" class="lt-textbox" id="reg_user_name" placeholder="Username">
+                    <input type="password" class="lt-textbox" id="reg_password" placeholder="Password">
+                    <!-- loading icon, show once create clicked -->
+                    <!-- <i id="loading-icon" class="fa fa-spinner fa-spin"></i> -->
+                    <input type="submit" id="create_account" class="lt-full-btn" value="Create Account">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Register Modal -->
+{% endblock %}

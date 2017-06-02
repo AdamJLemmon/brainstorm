@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li>
+            <a href="/find_wifi">
+                Refresh WiFi Table
+            </a>
+        </li>
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
+
+
+{% block body %}
+<div class="container col-md-9">
+    <table class="table network_table" style="top: 50px">
+        <thead>
+          <tr>
+            <th>Strength</th>
+            <th>SSID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for strength, ssid in networks %}
+          <tr>
+            <td>{{ strength }}</td>
+            <td>{{ ssid }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+  </table>
+
+</div>
+
+
+{% endblock %}

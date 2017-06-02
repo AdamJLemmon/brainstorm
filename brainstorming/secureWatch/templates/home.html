@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Game</title>
+        <meta charset="utf-8">
+        <!--Mobile Compatibility-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Bootstrap & JQuery includes-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- IPFS -->
+        <!-- loading the minified version -->
+        <script src="https://unpkg.com/ipfs/dist/index.min.js"></script>
+        <script src="https://unpkg.com/ipfs-api/dist/index.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container">
+
+            <!-- Register device -->
+            <div  class="col-md-4">
+                <h2 class="lt-h2">Register New Device</h2><br>
+                <input type="text" id="device_id" name="device_id" class="lt-textbox" placeholder="Enter device ID">
+                <input type="submit" id="reg_device" name="reg_device" class="lt-full-btn" value="Register">
+                <input type="submit" id="device_discovery" name="device_discovery" class="lt-full-btn" value="Discover Devices">
+                <input type="submit" id="start_acquiring" name="start_acquiring" class="lt-full-btn" value="Start Acquisition">
+                <div class="container" id="device_container"></div>
+            </div>
+
+            <!-- LIVE Frame Viewer -->
+            <div  class="col-md-4">
+                <h2 class="lt-h2">View Live Frame</h2><br>
+                <input type="submit" id="live_frame" name="live_frame" class="lt-full-btn" value="View">
+                
+                <div class="container" id='live_frame_container'>
+                    <!-- place frame here -->
+                </div>
+            </div>
+
+            <!-- REC Frame Viewer -->
+            <div  class="col-md-4">
+                <h2 class="lt-h2">View Recorded Frame</h2><br>
+                <input type="text" id="frame_date" name="frame_date" class="lt-textbox" placeholder="Enter date/time, format">
+                <input type="submit" id="rec_frame" name="rec_frame" class="lt-full-btn" value="View">
+                <div>
+                    <!-- place frame here -->
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <!-- JS files-->
+    {% load static %}
+    <script  src="{% static 'web3.min.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+    <link  rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</html>

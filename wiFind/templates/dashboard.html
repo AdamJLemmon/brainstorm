@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+<div id="sidebar" class="sidebar-container">
+    <ul>
+        <button class="btn-warning" id="register_node">Register a Node!</button>
+    </ul>
+</div>
+
+{% endblock %}
+
+{% block body %}
+    <div class="container" id='login_container'>
+        <!-- Login CONTAINER -->
+        <!-- <div  class="login-container">
+                <h2 class="lt-h2">Login to Your Account</h2><br>
+                <input type="text" id="user_name" class="lt-textbox" name="user"  placeholder="Username">
+                <input type="password" id="password" class="lt-textbox" name="pass" placeholder="Password">
+                <input type="submit" id="login" name="login" class="lt-full-btn" value="Login">
+                <div>
+                    <button type="button" id="register-modal-button" class="login-button" data-toggle="modal" data-target="#register-modal">Register</button>
+                    <button type="button" id="forgotpassword" class="login-button">Forgot Password</button>
+            </div>
+        </div> -->
+    </div>
+
+{% endblock %}

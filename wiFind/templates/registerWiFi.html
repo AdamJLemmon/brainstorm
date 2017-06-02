@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block sidebar %}
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper" class="col-md-3">
+    <ul class="sidebar-nav">
+        <li>
+            <a href="/register_wifi">
+                Refresh WiFi Table
+            </a>
+        </li>
+        <li>
+            <a href="#">Dashboard</a>
+        </li>
+        <li>
+        	<input type="text" id="network_name" class="lt-sm-textbox" name="network_name"  placeholder="Network ID">
+        	<button type="button" id="register_node" class="btn-warning">Register Network</button>
+        </li>
+    </ul>
+</div>
+
+{% endblock %}
+
+
+{% block body %}
+<div class="container col-md-6">
+    <table class="table network_table">
+        <thead>
+          <tr>
+            <th>Strength</th>
+            <th>SSID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for strength, ssid in networks %}
+          <tr>
+            <td>{{ strength }}</td>
+            <td>{{ ssid }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+  </table>
+</div>
+
+
+{% endblock %}

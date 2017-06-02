@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<html lang="en">
+
+    <head>
+      <title>Landing</title>
+      <meta charset="utf-8">
+        <!--Mobile Compatibility-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!--Bootstrap includes-->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="{{ url_for('static', filename='libraries/web3.js') }}"></script>
+      <script src="{{ url_for('static', filename='scripts/contract_reader.js') }}"></script>
+      <script src="{{ url_for('static', filename='scripts/greeter_tut.js') }}"></script>
+      <script src="{{ url_for('static', filename='scripts/myToken_tut.js') }}"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+          <h1>Portal</h1>
+          <p>This is some text.</p>
+            <div class=row>
+                Account: <input type="text" id="account"><br>
+                To Account: <input type="text" id="toAccount"><br>
+                Amount: <input type="text" id="amount"><br>
+            </div>
+
+            <div class=row>
+                <button id="test_btn" type="button" class="btn btn-default">Storage Test Me</button>
+                <button id="account_balance" type="button" class="btn btn-default">Get Account Balance</button>
+                <button id="transfer_token" type="button" class="btn btn-default">Transfer</button>
+            </div>
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+    var Web3 = require('web3');
+    var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));    
+      
+// *** Listeners ***
+
+    $('#test_btn').on('click', function(){
+        console.log("API Connection: " + web3.isConnected())
+
+        if (web3.isConnected()){
+            $.ajax({
+                url: '/read_greeter',
+                data: {},
+                type: 'GET',
+                success: function(response) {
+                    // console.log(response);
+                    // deploy_greeter(web3, response)
+                    // greet_greeter(web3, "0x97214502f19ea705c002978d53dc910a6535f09a", response)
+                    // kill_greeter(web3, "0x97214502f19ea705c002978d53dc910a6535f09a", response)
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+        else {
+          console.log("API connection failed!!")
+        }
+    })
+
+
+
+    $('#account_balance').on('click', function() {
+        $.ajax({
+                url: '/read_my_token',
+                data: {},
+                type: 'GET',
+                success: function(response) {
+                  var accountAddr = $('#account').val()
+                    // console.log(response);
+                    // deploy_token_contract(web3, response)
+                    getAccountBalance(web3, "0x254dbc63900df20d53f3596f795b08e63ee84e6e", response, accountAddr)
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+
+
+    $('#transfer_token').on('click', function() {
+        $.ajax({
+                url: '/read_my_token',
+                data: {},
+                type: 'GET',
+                success: function(response) {
+                  // console.log(response);
+                  
+                  var fromAddr = $('#account').val()
+                  var toAccount = $('#toAccount').val()
+                  var amount = $('#amount').val()
+                    
+                    // deploy_token_contract(web3, response)
+                    transfer(web3, "0x254dbc63900df20d53f3596f795b08e63ee84e6e", response, fromAddr, toAccount, amount)
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        });
+
+    </script>
+
+</html>
+

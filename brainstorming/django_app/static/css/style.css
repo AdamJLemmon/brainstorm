@@ -1,0 +1,229 @@
+body {
+    background-color: darkslategray ;
+}
+
+#mainNav {
+    background-color: darkslategray ;
+}
+
+/* right side text color */
+.navbar-default .navbar-nav>li>a {
+    color: orange !important;
+}
+
+/* left side text color */
+.navbar-default .navbar-brand{
+    color: orange !important;
+    font-size: 25px;
+}
+
+/* border colour of navbar*/
+.navbar-default {
+    border-color: orange;
+}
+
+/* remove text highlight */
+a:hover { color: orange !important; }
+a:focus { color: orange !important; }
+
+
+/****** LOGIN MODAL ******/
+.login-container {
+    position: relative;
+    top: 100px;
+    padding: 10px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: darkslategray;
+    margin: 0 auto;
+    border: 1px solid orange;
+    overflow: hidden;
+    font-family: sans serif;
+}
+
+.lt-h2 {
+    text-align: center;
+    font-size: 1.8em;
+    font-family: sans serif;
+    color: orange;
+}
+
+.lt-textbox {
+    height: 45px;
+    color: orange;
+    padding-left: 25px;
+    font-size: 16px;
+    font-family: sans serif;
+    width: 100%;
+    margin-bottom: 10px;
+    background: darkslategray;
+    border: 1px solid orange;
+}
+
+.lt-full-btn {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    height: 45px;
+    border: 1px solid orange;
+    background-color: darkslategray;
+    color: orange;
+    font-family: sans serif;
+    font-size: 16px;
+}
+
+.lt-full-btn:hover {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    height: 45px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: darkslategray;
+    font-family: sans serif;
+    font-size: 16px;
+}
+
+.login-button {
+    display: inline;
+    float:left;
+    width: 50%;
+    margin-bottom: 10px;
+    height: 45px;
+    border: 1px solid orange;
+    background-color: darkslategray;
+    color: orange;
+    font-family: sans serif;
+    font-size: 16px;
+}
+
+.login-button:hover {
+    display: inline;
+    float:left;
+    width: 50%;
+    margin-bottom: 10px;
+    height: 45px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: darkslategray;
+    font-family: sans serif;
+    font-size: 16px;
+    /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: orange;
+    text-align: left;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: orange;
+   opacity:  1;
+    text-align: left;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: orange;
+   opacity:  1;
+    text-align: left;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: orange;
+    text-align: left;
+
+}
+
+
+.register-container {
+    padding: 10px;
+    max-width: 350px;
+    width: 100% !important;
+    background-color: darkslategray;
+    margin: 0 auto;
+    border: 1px solid orange;
+    overflow: hidden;
+    font-family: sans serif;
+}
+
+
+.lt-h2-title {
+    text-align: center;
+    font-family: sans serif;
+    color: orange;
+    padding-bottom: 5px;
+}
+
+.lt-h3-text {
+    text-align: center;
+    font-family: sans serif;
+    color: orange;
+}
+
+.dashboard-account-container {
+    padding: 10px;
+    width: 50% !important;
+    height: 355px;
+    min-width: 575px;
+    position: relative;
+    padding: 10px;
+    background-color: darkslategray;
+    margin: auto;
+    margin-top: 90px;
+    border: 1px solid orange;
+    font-family: sans serif;
+}
+
+.dashboard-transaction-container {
+    padding: 10px;
+    width: 80% !important;
+    height: 450px;
+    min-width: 700px;
+    position: relative;
+    padding: 10px;
+    background-color: darkslategray;
+    margin: auto;
+    margin-top: 40px;
+    border: 1px solid orange;
+    font-family: sans serif;
+}
+
+.float_center {
+  float: right;
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: center;
+}
+
+.lt-start-button {
+    width: 300px;
+    position: relative;
+    top: 300px;
+    margin: 0 auto;
+    height: 100px;
+    border: 1px solid orange;
+    background-color: darkslategray;
+    color: orange;
+    font-family: sans serif;
+    font-size: 20px;
+}
+
+.lt-start-button:hover {
+    width: 300px;
+    position: relative;
+    top: 300px;
+    margin: 0 auto;
+    height: 100px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: darkslategray;
+    font-family: sans serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
